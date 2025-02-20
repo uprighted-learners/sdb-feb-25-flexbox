@@ -9,6 +9,14 @@ body {
 	font-family: Arial, Helvetica, sans-serif;
 }
 
+/* 
+    ? Flexbox
+    * module dividing our wireframe
+    * divides wireframes into parent & child containers
+    * uses custom properties and values
+    * it uses the pattern of parents controlling children
+*/
+
 .navbar {
 	padding: 2em;
 
@@ -40,13 +48,40 @@ body {
 	align-self: flex-end;
 }
 
+/* 
+    ? Flexbox Challenge
+    * we have two input fields and a button
+    * 1. put them in column view
+    * 2. center width-wise
+    * 3. center height-wise
+    ! SPICEY challenge: flip the button to be on top
+*/
+
 .auth-wrapper > input,
 button {
 	padding: 10px;
 	border-radius: 5px;
 	color: #3e5b74;
+	width: 200px;
+}
+
+.auth-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	/* flex-direction: column-reverse; */
+	gap: 5px;
 }
 
 #submitBtn {
-	width: 200px;
+	width: 220px;
+	/* order: -1; */
+}
+
+#submitBtn:hover {
+	background-color: #3e5b74;
+	color: white;
+	transition: ease-in 0.5s;
 }
